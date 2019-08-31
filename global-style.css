@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-image: url('images/aesthetic.jpg');
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #CFCFCF;
+}
+
+.home-page-entry {
+    margin: 10px 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.home-page-entry p,
+h1,
+h2 {
+    margin: 20px 10px;
+}
+
+.home-page-entry a {
+    text-decoration: none;
+}
+.home-page-entry a:hover {
+    text-decoration: underline;
+}
+
+.home-page-entry ul,
+ol {
+    margin: 10px 40px;
+}
+.home-page-entry li {
+    margin: 10px 0;
+}
+.home-page-entry img {
+    margin: 10px 20px;
+}
+.home-page-entry figcaption {
+    margin: 5px 20px;
+    font-size: 0.75em;
+}
+
+.header-container {
+    color: #fff;
+    background-color: #00A39B;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    font-family: 'Nanum Gothic Coding', monospace;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+.header a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+.header a:hover {
+    text-decoration: none;
+    color: #BDBDBD;
+}
+.header-title {
+    font-size: 5em;
+}
+.header-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-display {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.social-links-container {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+}
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 2em;
+}
+.social-links > .fab {
+}
+.social-links > a:visited {
+    color: #fff;
+}
+.social-links > a:hover {
+    color: #BDBDBD;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+}
+.profile-image > img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}

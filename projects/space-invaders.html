@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>James Aubin</title>
+    <link rel='stylesheet' href='../global-style.css'/>
+    <script src="https://kit.fontawesome.com/1c73a8b5f8.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Gothic+Coding&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class='page'>
+      <div class='header-container'>
+        <div class='header'>
+
+          <div class='header-pic'>
+            <!--<div class='name-display'>jaubin9422@gmail.com</div>-->
+            <div class='profile-image'><img src='../images/me_website.png'/></div>
+          </div>
+
+          <h1 class='header-title'><a href='../index.html'>James Aubin</a></h1>
+
+          <div class='social-links-container'>
+            <div class='social-links-title'>Links</div>
+            <div class='social-links'>
+              <a href='http://github.com/JOBBIN9422'><i class="fab fa-github"></i></a>
+              <a href='https://www.linkedin.com/in/james-aubin-024785155/'><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='main-content-container'>
+        <div class='home-page-entry'>
+          <h1>Space Invaders Emulator</h1>
+             <img src='images/invaders.gif'/>
+             <h2>Summary</h2>
+             <p>For this project, I decided to emulate the classic arcade game,
+                <em>Space Invaders</em>. Player 1 controls and all sounds are implemented.
+                Although <em>Space Invaders</em> doesn't use all of the Intel 8080
+                CPU instructions, I decided to implement them anyways.</p>
+
+             <h2>Compiling &amp; Running</h2>
+             <ol>
+               <li>Download the source code from the <a href='https://github.com/JOBBIN9422/8080Invaders'>repository</a>.</li>
+               <li>Use the makefile included in the root directory.</li>
+               <li>Run the executable (./invaders) via your terminal.</li>
+             </ol>
+
+             <h2>Controls</h2>
+             <ul>
+               <li><strong>Shift:</strong> Insert Coin</li>
+               <li><strong>Enter: </strong> P1 Start</li>
+               <li><strong>Left/Right: </strong> P1 Move</li>
+               <li><strong>Space: </strong> P1 Fire</li>
+             </ul>
+
+             <h2>Remarks</h2>
+             <p>Interestingly, <em>Space Invaders</em> draws all of its graphics
+                horizontally (player and shields at left edge, score display at right edge). 
+                In order to present the player with an upright view, the CRT monitor was
+                simply rotated 90 degrees counter-clockwise when mounted in the cabinet. 
+                Vertical scanlines in the CRT monitor make this fact apparent.
+                While the original method sounds trivial (physically rotate the display
+                so the graphics are oriented correctly), digitally rotating the display
+                buffer in real-time proved to be one of the more challenging parts
+                of this project.</p>
+             <figure>
+                <img src='images/scanlines.jpg' style='width: 500px;'/>
+                <figcaption>Vertical scanlines of the game display (CRT scanlines are horizontal when not rotated).</figcaption>
+             </figure>
+             <p>Initially, I copied the game's framebuffer to a new array on each
+                frame, then rotated that copy to display coordinates and read it out to the screen. 
+                Obviously, this was not efficient - it destroyed my CPU and memory usage. 
+                After some tinkering, I came up
+                with the below algorithm which maps each framebuffer pixel to its 
+                rotated display pixel in one pass:</p>
+<script src="https://gist.github.com/JOBBIN9422/5152f6d4608977de08318fc2211ca710.js"></script>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
