@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>James Aubin</title>
+    <link rel='stylesheet' href='../global-style.css'/>
+    <script src="https://kit.fontawesome.com/1c73a8b5f8.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Gothic+Coding&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class='page'>
+      <div class='header-container'>
+        <div class='header'>
+
+          <div class='header-pic'>
+            <!--<div class='name-display'>jaubin9422@gmail.com</div>-->
+            <div class='profile-image'><img src='../images/me_website.png'/></div>
+          </div>
+
+          <h1 class='header-title'><a href='../index.html'>James Aubin</a></h1>
+
+          <div class='social-links-container'>
+            <div class='social-links-title'>Links</div>
+            <div class='social-links'>
+              <a target='_blank' href='http://github.com/JOBBIN9422'><i class="fab fa-github"></i></a>
+              <a target='_blank' href='https://www.linkedin.com/in/james-aubin-024785155/'><i class="fab fa-linkedin"></i></a>
+              <a target='_blank' href='../resume.pdf'><i class="fas fa-portrait"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='main-content-container'>
+        <div class='home-page-entry'>
+          <h1>CHIP-8 Emulator</h1>
+             <img src='images/chip8.gif'/>
+
+             <h2>Summary</h2>
+             <p>This is a basic <a href='https://en.wikipedia.org/wiki/CHIP-8'>CHIP-8</a>
+                emulator implemented in C#. The frontend was designed using WinForms
+                 (gross, I know). It has several features which allow you to inspect
+                the contents of the machine as it runs:</p>
+                <ul>
+                  <li>A debug window which displays the following:
+                    <ul>
+                      <li>Register contents</li>
+                      <li>Stack contents and stack pointer location</li>
+                      <li>Timer states</li>
+                      <li>Program counter address</li>
+                    </ul>
+                  </li>
+                  <li>A window which displays the currently executing instruction
+                      and its address.</li>
+                  <li>A button which allows the user to view an arbitary byte of
+                      memory at a given address.</li>
+                  <li>Variable clock speed.</li>
+                </ul>
+             <h2>Compiling &amp; Running</h2>
+             <ol>
+               <li>Create a WinForms project in Visual Studio.</li>
+               <li>Add the source code from the <a href='https://github.com/JOBBIN9422/ChocolateCHIP'>repository</a> to your
+                   project.</li>
+               <li>Build the project and load some <a href='https://github.com/JOBBIN9422/ChocolateCHIP/tree/master/emuDebug/games/roms'>ROMs</a>.</li>
+             </ol>
+
+             <h2>Controls</h2>
+             <p>The leftmost 16 keys of the keyboard (1 to 4, Q to R, A to F, and Z to V)
+                act as the keypad of the CHIP-8. Different games use somewhat
+                arbitrary bindings for the keypad.</p>
+
+             <h2>Remarks</h2>
+             <p>Interestingly, CHIP-8 never had native hardware designed for it - it
+             was developed as an interpreted language run on a simple virtual machine.
+             This allowed it to be run on early 8-bit computers which didn't have
+             many games written for them at the time.</p>
+            
+             <p>This design choice gives the CHIP-8 interpreter some unique quirks
+                and leads to some minor differences between implentations of the
+                interpeter. Firstly, many different games expect wildly different
+                clock speeds for the virtual CPU. I assume this is due to the many
+                decades worth of interpreters written for all sorts of different
+                hardware (everything from 8-bit computers to calculators). This 
+                made having an adjustable clock speed a necessity for testing 
+                different games on the emulator.</p>
+
+             <p>Secondly, different interpreters handle the CHIP-8's draw code
+                differently for pixels which are outside of the screen bounds.
+                Some interpreters treat out-of-bounds pixels as no-ops (nothing happens
+                for these pixels). Other interpreters (mine included) perform
+                modulo operations on OOB pixels (this wraps them around to the
+                other side of the screen). Either setting can break some games
+                depending on which behavior they expect. For example, graphics
+                wrapping in the BLITZ ROM causes an unintended game over due to
+                the columns of pixels wrapping from the bottom edge to the top
+                of the screen.</p>
+
+             <img src='images/chip8-2.gif'/>
+
+            
+            <h2>References</h2>
+              <ul>
+                <li><a href='http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter/'>Laurence Muller</a></li>
+                <li><a href='http://devernay.free.fr/hacks/chip8/C8TECH10.HTM'>Cowgod</a></li>
+                <li><a href='http://mattmik.com/files/chip8/mastering/chip8.html'>Matthew Mikolay</a></li>
+              </ul>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
