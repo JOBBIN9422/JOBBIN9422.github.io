@@ -14,7 +14,7 @@
 .main-content-container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     background-color: #CFCFCF;
     /*background-color: #BFF5e6;*/
 }
@@ -27,29 +27,27 @@
 .home-page-entry p,
 h1,
 h2 {
-    margin: 20px 10px;
+    margin: 20px 100px;
 }
-
+.home-page-entry > ul,
+ol {
+    margin: 10px 100px;
+}
+.home-page-entry li {
+    margin: 10px 20px;
+}
+.home-page-entry img {
+    margin: 10px 100px;
+}
+.home-page-entry figcaption {
+    margin: 0px 100px;
+    font-size: 0.75em;
+}
 .home-page-entry a {
     text-decoration: none;
 }
 .home-page-entry a:hover {
     text-decoration: underline;
-}
-
-.home-page-entry ul,
-ol {
-    margin: 10px 40px;
-}
-.home-page-entry li {
-    margin: 10px 0;
-}
-.home-page-entry img {
-    margin: 10px 20px;
-}
-.home-page-entry figcaption {
-    margin: 5px 20px;
-    font-size: 0.75em;
 }
 
 .header-container {
@@ -97,9 +95,11 @@ ol {
 
 .social-links-container {
     display: flex;
+    height: 50%;
     width: 25%;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-end;
     font-size: 1.5em;
 }
 .social-links {
@@ -108,7 +108,8 @@ ol {
     width: 100%;
     font-size: 2em;
 }
-.social-links > .fab {
+.social-links-title {
+    margin-bottom: 20px;
 }
 .social-links > a:visited {
     color: #fff;
