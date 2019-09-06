@@ -44,7 +44,7 @@ ol {
 }
 .home-page-entry img {
     margin: 10px 100px;
-    max-width: 100%;
+    max-width: 70%;
 }
 .home-page-entry figcaption {
     margin: 0px 100px;
@@ -67,7 +67,7 @@ ol {
 
 .header {
     font-family: 'Inconsolata', monospace;
-    width: 80%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-around;
