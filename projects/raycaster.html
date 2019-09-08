@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Raycasting Engine</title>
+    <link rel='stylesheet' href='../global-style.css'/>
+    <script src="https://kit.fontawesome.com/1c73a8b5f8.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Inconsolata|Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class='page'>
+      <div class='header-container'>
+        <div class='header'>
+
+          <div class='header-pic'>
+            <!--<div class='name-display'>jaubin9422@gmail.com</div>-->
+            <div class='profile-image'><img src='../images/me_website.png'/></div>
+          </div>
+
+          <h1 class='header-title'><a href='../index.html'>James Aubin</a></h1>
+
+          <div class='social-links-container'>
+            <!--<div class='social-links-title'>Links</div>-->
+            <div class='social-links'>
+              <a target='_blank' href='http://github.com/JOBBIN9422'><i class="fab fa-github"></i></a>
+              <a target='_blank' href='https://www.linkedin.com/in/james-aubin-024785155/'><i class="fab fa-linkedin"></i></a>
+              <a target='_blank' href='../resume.pdf'><i class="fas fa-portrait"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='main-content-container'>
+        <div class='home-page-entry'>
+          <h1>Raycasting Engine</h1>
+             <img src='images/raycast.gif' style='width: 75%;'/>
+             <h2>Summary</h2>
+             <p>This is a basic raycasting engine implemented in C++/SDL2. Currently,
+                It's very barebones - it only supports orthgonal (textured) walls and static world entities.
+                Due to rendering issues, I stopped the project after adding basic
+                world entities.</p>
+
+             <h2>Compiling &amp; Running</h2>
+             <ol>
+               <li>Install the necessary libraries:
+                 <ul>
+                   <li><a href='https://www.libsdl.org/download-2.0.php'>SDL2</a></li>
+                   <li><a href='https://www.libsdl.org/projects/SDL_image/'>SDL2_image</a></li>
+                   <li><a href='http://arma.sourceforge.net/'>Armadillo</a></li>
+                 </ul>
+               </li>
+               <li>Use the included makefile (Linux) or build the source files
+                   in an empty C++ project within Visual Studio (<a href='https://lazyfoo.net/tutorials/SDL/01_hello_SDL/windows/msvsnet2010u/index.php'>Windows</a>).</li>
+             </ol>
+
+             <h2>Controls</h2>
+             <ul>
+               <li><strong>WASD:</strong> Move/strafe</li>
+               <li><strong>Left/Right Arrows: </strong>Turning</li>
+             </ul>
+
+             <h2>Remarks</h2>
+             <p>As you may have already noticed, the wall textures in the test map
+                were lifted from <a href='https://en.wikipedia.org/wiki/Wolfenstein_3D'>Wolfenstein 3D</a>. This 1992 FPS was
+                one of the earliest of its kind and thus makes a great example or
+                reference for this kind of pseudo-3D rendering technique.</p>
+
+            <h2>References</h2>
+                <ul>
+                <li><a href='https://lodev.org/cgtutor/raycasting.html'>Lode Vandevenne</a></li>
+                <li><a href='https://permadi.com/1996/05/ray-casting-tutorial-table-of-contents/'>Permadi</a></li>
+                <li><a href='https://www.playfuljs.com/a-first-person-engine-in-265-lines/'>Hunter Loftis</a></li>
+                </ul>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
