@@ -34,7 +34,14 @@
       <div class='main-content-container'>
         <div class='page-entry'>
           <h1>Boids</h1>
-          <canvas id='game-window'></canvas>
+            <canvas id='game-window'></canvas>
+            <div class='game-controls'>
+              <label for='boids-count-slider'>Boids Count</label>
+              <input type='range' min='1' max='50' value='25' step='1' class='slider' name='boids-count-slider' id='boids-count-slider' onchange='changeBoidsAmount(this.value)'/>
+              <label for='boids-count-slider'>Neighborhood Radius</label>
+              <input type='range' min='1' max='100' value='50' step='1' class='slider' name='boids-radius-slider' id='boids-count-slider' onchange='changeBoidsRadius(this.value)'/>
+            </div>
+          
              <h2>Summary</h2>
              <p><em>Boids</em> is a flocking algorithm consisting of multiple agents
                 which move according to three basic rules:</p>

@@ -235,6 +235,46 @@ function eventLoop(boids)
     requestAnimationFrame(function() { eventLoop(boids) });
 }
 
+function addBoids(numBoids)
+{
+    for (let i = 0; i < numBoids; i++)
+    {
+        let randX = Math.floor(Math.random() * canvas.width);
+        let randY = Math.floor(Math.random() * canvas.height);
+
+        boids.push(new Boid(randX, randY, canvas.width, canvas.height, boids));
+    }
+}
+
+function changeBoidsAmount(numBoids)
+{
+    if (boids.length < numBoids)
+    {
+        let numBoidsToAdd = numBoids - boids.length;
+        addBoids(numBoidsToAdd);
+    }
+    else if (boids.length > numBoids)
+    {
+        let numBoidsToRemove = boids.length - numBoids;
+        for (let i = 0; i < numBoidsToRemove; i++)
+        {
+            boids.pop();
+        }
+    }
+    else
+    {
+        return;
+    }
+}
+
+function changeBoidsRadius(newRadius)
+{
+    for (let i = 0; i < boids.length; i++)
+    {
+        boids[i].radius = newRadius;
+    }
+}
+
 //init rendering
 let canvas = document.getElementById('game-window');
 canvas.width = canvas.clientWidth;
@@ -242,12 +282,5 @@ canvas.height = canvas.clientHeight;
 let renderContext = canvas.getContext('2d');
 
 let boids = [];
-for (let i = 0; i < 30; i++)
-{
-    let randX = Math.floor(Math.random() * canvas.width);
-    let randY = Math.floor(Math.random() * canvas.height);
-
-    boids.push(new Boid(randX, randY, canvas.width, canvas.height, boids));
-}
-
+addBoids(25);
 eventLoop(boids);
