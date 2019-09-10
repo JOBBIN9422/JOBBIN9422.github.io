@@ -57,6 +57,10 @@ ol {
     text-decoration: underline;
 }
 
+.page-entry .gist {
+    margin: 20px 20%;
+}
+
 .header-container {
     color: #fff;
     background-color: #00A39B;
@@ -145,3 +149,4 @@ ol {
     margin: 40px auto;
     background-color: #EEEEEE;
 }
+
