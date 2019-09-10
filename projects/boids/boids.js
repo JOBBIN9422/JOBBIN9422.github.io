@@ -8,6 +8,10 @@ class Boid
         this.boids = boids;
         this.color = getRandomColor();
 
+        this.separationCoefficient = 1.3;
+        this.alignmentCoefficient = 1.1;
+        this.cohesionCoefficient = 1.0;
+
         //vector members
         this.position = math.matrix([x, y]);
         this.velocity = math.matrix([Math.random() * 4 - 2, Math.random() * 4 - 2]);
@@ -51,9 +55,9 @@ class Boid
         let alignmentVec = this.alignment;
 
         //scale vectors before accelerating
-        separationVec = math.multiply(separationVec, 1.3);
-        alignmentVec = math.multiply(alignmentVec, 1.1);
-        cohesionVec = math.multiply(cohesionVec, 1);
+        separationVec = math.multiply(separationVec, this.separationCoefficient);
+        alignmentVec = math.multiply(alignmentVec, this.alignmentCoefficient);
+        cohesionVec = math.multiply(cohesionVec, this.cohesionCoefficient);
 
         this.acceleration = math.add(this.acceleration, separationVec);
         this.acceleration = math.add(this.acceleration, cohesionVec);
@@ -252,7 +256,11 @@ function changeBoidsAmount(numBoids)
     {
         let numBoidsToAdd = numBoids - boids.length;
         addBoids(numBoidsToAdd);
+
         changeBoidsRadius(boids[0].radius);
+        changeBoidsSeparation(boids[0].separationCoefficient);
+        changeBoidsAlignment(boids[0].alignmentCoefficient);
+        changeBoidsCohesion(boids[0].cohesionCoefficient);
     }
     else if (boids.length > numBoids)
     {
@@ -273,6 +281,30 @@ function changeBoidsRadius(newRadius)
     for (let i = 0; i < boids.length; i++)
     {
         boids[i].radius = newRadius;
+    }
+}
+
+function changeBoidsSeparation(newVal)
+{
+    for (let i = 0; i < boids.length; i++)
+    {
+        boids[i].separationCoefficient = newVal;
+    }
+}
+
+function changeBoidsAlignment(newVal)
+{
+    for (let i = 0; i < boids.length; i++)
+    {
+        boids[i].alignmentCoefficient = newVal;
+    }
+}
+
+function changeBoidsCohesion(newVal)
+{
+    for (let i = 0; i < boids.length; i++)
+    {
+        boids[i].cohesionCoefficient = newVal;
     }
 }
 
