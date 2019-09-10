@@ -136,3 +136,12 @@ ol {
     max-height: 100%;
     border-radius: 50%;
 }
+
+#game-window {
+    width: 640px;
+    height: 480px;
+    display: block;
+    border: 1px solid #BBBBBB;
+    margin: 40px auto;
+    background-color: #EEEEEE;
+}
