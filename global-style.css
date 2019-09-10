@@ -33,21 +33,21 @@ html, body {
 .home-page-entry p,
 h1,
 h2 {
-    margin: 20px 100px;
+    margin: 20px 20%;
 }
 .home-page-entry > ul,
 ol {
-    margin: 10px 100px;
+    margin: 10px 20%;
 }
 .home-page-entry li {
     margin: 10px 20px;
 }
 .home-page-entry img {
-    margin: 10px 100px;
-    max-width: 70%;
+    margin: 10px 20%;
+    max-width: 50%;
 }
 .home-page-entry figcaption {
-    margin: 0px 100px;
+    margin: 0px 20%;
     font-size: 0.75em;
 }
 .home-page-entry a {
