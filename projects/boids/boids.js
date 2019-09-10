@@ -252,6 +252,7 @@ function changeBoidsAmount(numBoids)
     {
         let numBoidsToAdd = numBoids - boids.length;
         addBoids(numBoidsToAdd);
+        changeBoidsRadius(boids[0].radius);
     }
     else if (boids.length > numBoids)
     {
