@@ -25,35 +25,35 @@ html, body {
     /*background-color: #BFF5e6;*/
 }
 
-.home-page-entry {
+.page-entry {
     margin: 10px 0;
     font-family: 'Open Sans', sans-serif;
 }
 
-.home-page-entry p,
+.page-entry p,
 h1,
 h2 {
     margin: 20px 20%;
 }
-.home-page-entry > ul,
+.page-entry > ul,
 ol {
     margin: 10px 20%;
 }
-.home-page-entry li {
+.page-entry li {
     margin: 10px 20px;
 }
-.home-page-entry img {
+.page-entry img {
     margin: 10px 20%;
     max-width: 50%;
 }
-.home-page-entry figcaption {
+.page-entry figcaption {
     margin: 0px 20%;
     font-size: 0.75em;
 }
-.home-page-entry a {
+.page-entry a {
     text-decoration: none;
 }
-.home-page-entry a:hover {
+.page-entry a:hover {
     text-decoration: underline;
 }
 
