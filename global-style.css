@@ -30,6 +30,10 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.page-entry h1 {
+    text-align: center;
+}
+
 .page-entry p,
 h1,
 h2 {
