@@ -34,10 +34,15 @@ html, body {
     text-align: center;
 }
 
-.page-entry p,
-h1,
+.page-entry h1,
 h2 {
     margin: 20px 20%;
+}
+.page-entry h3 {
+    margin: 20px 20% 10px 20%;
+}
+.page-entry p {
+    margin: 10px 20%;
 }
 .page-entry > ul,
 ol {
@@ -51,7 +56,7 @@ ol {
     max-width: 50%;
 }
 .page-entry figcaption {
-    margin: 0px 20%;
+    margin: 0px 20% 30px 20%;
     font-size: 0.75em;
 }
 .page-entry a {
