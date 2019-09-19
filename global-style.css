@@ -123,14 +123,13 @@ ol {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
     margin-right: 10px;
 }
 .social-links {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    font-size: 2em;
+    font-size: 3em;
 }
 .social-links-title {
     margin-bottom: 0px;
