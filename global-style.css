@@ -23,9 +23,11 @@ html, body {
     width: 70%;
     background-color: #CFCFCF;
     /*background-color: #BFF5e6;*/
+    align-items: center;
 }
 
 .page-entry {
+    width: 60%;
     margin: 10px 0;
     font-family: 'Open Sans', sans-serif;
 }
@@ -36,27 +38,27 @@ html, body {
 
 .page-entry h1,
 h2 {
-    margin: 20px 20%;
+    margin: 20px 0%;
 }
 .page-entry h3 {
-    margin: 20px 20% 10px 20%;
+    margin: 20px 0% 10px 0%;
 }
 .page-entry p {
-    margin: 10px 20%;
+    margin: 10px 0%;
 }
 .page-entry > ul,
 ol {
-    margin: 10px 20%;
+    margin: 10px 0%;
 }
 .page-entry li {
     margin: 10px 20px;
 }
 .page-entry img {
-    margin: 10px 20%;
-    max-width: 50%;
+    margin: 10px 0%;
+    max-width: 100%;
 }
 .page-entry figcaption {
-    margin: 0px 20% 30px 20%;
+    margin: 0px 0% 30px 0%;
     font-size: 0.75em;
 }
 .page-entry a {
@@ -74,7 +76,38 @@ ol {
 }
 
 .page-entry .gist {
-    margin: 20px 20%;
+    margin: 20px 0%;
+}
+
+.footer {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.footer hr {
+    width: 100%;
+    margin: 10px auto;
+}
+.footer ul {
+    margin: 0px auto 10px auto;
+}
+.footer li {
+    display: inline;
+    margin: 0px 40px;
+}
+.footer a {
+    text-decoration: none;
+    color: #00A39B;
+}
+.footer a:visited {
+    text-decoration: none;
+    color: #BA00AE;
+}
+.footer a:hover {
+    background-color: #DDDDDD;
+    border-radius: 5px;
+    text-decoration: underline;
 }
 
 .header-container {
