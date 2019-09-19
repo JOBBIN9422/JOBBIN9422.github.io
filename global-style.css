@@ -24,6 +24,7 @@ html, body {
     background-color: #CFCFCF;
     /*background-color: #BFF5e6;*/
     align-items: center;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .page-entry {
