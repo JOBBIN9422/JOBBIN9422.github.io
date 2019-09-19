@@ -61,8 +61,15 @@ ol {
 }
 .page-entry a {
     text-decoration: none;
+    color: #00A39B;
+}
+.page-entry a:visited {
+    text-decoration: none;
+    color: #BA00AE;
 }
 .page-entry a:hover {
+    background-color: #DDDDDD;
+    border-radius: 5px;
     text-decoration: underline;
 }
 
