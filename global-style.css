@@ -85,6 +85,7 @@ ol {
     display: flex;
     flex-direction: column;
     width: 60%;
+    align-items: center;
 }
 .footer hr {
     width: 100%;
@@ -109,6 +110,10 @@ ol {
     background-color: #DDDDDD;
     border-radius: 5px;
     text-decoration: underline;
+}
+.footer img {
+    max-width: 100%;
+    margin: 5px auto;
 }
 
 .header-container {
