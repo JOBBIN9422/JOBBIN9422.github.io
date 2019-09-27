@@ -221,18 +221,22 @@ ol {
 }
 
 /* mobile definitions */
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 900px) {
     .header-pic {
+        margin-left: 0px;
+        width: 15%;
     }
 
     .social-links-container {
         height: 100%;
+        margin-right: 0px;
+        width: 35%;
     }
 
     .profile-image > img {
         margin-top: 5px;
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         max-width: 100%;
         max-height: 100%;
         border-radius: 50%;
@@ -242,21 +246,33 @@ ol {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     .header-title {
         text-align: center;
         margin: 0px auto;
-        font-size: 1.5em;
+        font-size: 1em;
+    }
+
+    .page-entry {
+        width: 80%;
+    }
+
+    .footer {
+        width: 80%;
+    }
+
+    .footer li {
+        margin: 0px 10px;
+        font-size: 0.75em;
     }
 
     #game-window {
-        width: 320px;
-        height: 240px;
+        width: 100%;
     }
 
     .game-controls .slider {
-        width: 320px;
+        width: 100%;
     }
 }
