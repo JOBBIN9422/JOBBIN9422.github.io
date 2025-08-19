@@ -31,7 +31,7 @@ url: "https://jaubin.net" # the base hostname & protocol for your site, e.g. htt
 github_username: JOBBIN9422
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 
