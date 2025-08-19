@@ -1,106 +1,57 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8'/>
-    <meta name="viewport" content= "width=device-width, initial-scale=1.0"/> 
-    <title>Boids</title>
-    <link rel='stylesheet' href='../global-style.css'/>
-    <script src="https://kit.fontawesome.com/1c73a8b5f8.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Inconsolata|Nanum+Gothic+Coding&display=swap" rel="stylesheet">
-    <link href='../favicon.ico' rel='icon'/>
-  </head>
-  <body>
-    <div class='page'>
-      <div class='header-container'>
-        <div class='header'>
+---
+title: Boids
+layout: default
+---
 
-          <div class='header-pic'>
-            <!--<div class='name-display'>jaubin9422@gmail.com</div>-->
-            <div class='profile-image'><img src='../images/me_banner_2.png'/></div>
-          </div>
+<canvas id='game-window'></canvas>
+<div class='game-controls'>
+  <label for='boids-count-slider'>Boids Count</label>
+  <input type='range' min='1' max='50' value='25' step='1' class='slider' name='boids-count-slider' id='boids-count-slider' onchange='changeBoidsAmount(this.value)'/>
+  <label for='boids-count-slider'>Neighborhood Radius</label>
+  <input type='range' min='1' max='100' value='50' step='1' class='slider' name='boids-radius-slider' id='boids-count-slider' onchange='changeBoidsRadius(this.value)'/>
 
-          <h1 class='header-title'><a href='../index.html'>James Aubin</a></h1>
+  <label for='boids-separation-slider'>Separation</label>
+  <input type='range' min='0' max='5' value='1.3' step='0.1' class='slider' name='boids-separation-slider' id='boids-separation-slider' onchange='changeBoidsSeparation(this.value)'/>
+  <label for='boids-alignment-slider'>Alignment</label>
+  <input type='range' min='0' max='5' value='1.1' step='0.1' class='slider' name='boids-alignment-slider' id='boids-alignment-slider' onchange='changeBoidsAlignment(this.value)'/>
+  <label for='boids-cohesion-slider'>Cohesion</label>
+  <input type='range' min='0' max='5' value='1.0' step='0.1' class='slider' name='boids-cohesion-slider' id='boids-cohesion-slider' onchange='changeBoidsCohesion(this.value)'/>
+</div>
 
-          <div class='social-links-container'>
-            <!--<div class='social-links-title'>Links</div>-->
-            <div class='social-links'>
-              <a target='_blank' href='http://github.com/JOBBIN9422'><i class="fab fa-github"></i></a>
-              <a target='_blank' href='https://www.linkedin.com/in/james-aubin-024785155/'><i class="fab fa-linkedin"></i></a>
-              <a target='_blank' href='mailto:jaubin9422@gmail.com'><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+ <h2>Summary</h2>
+ <p><em>Boids</em> is a flocking algorithm consisting of multiple agents
+	which move according to three basic rules:</p>
+ <ul>
+    <li><strong>Separation: </strong>Steer to avoid getting too close to neighbors.</li>
+    <li><strong>Cohesion: </strong>Steer towards the average position of neighbors.</li>
+    <li><strong>Alignment: </strong>Steer towards the average heading of neighbors.</li>
+ </ul>
 
+ <p>As you can see above, these three simple rules result in pretty convincing flocking
+	behavior when applied to each boid in the simulation. Each boid has its heading
+	and neighborhood radius drawn so you can get a better idea of how flocks form
+	and interact.</p>
+  
+ <h2>Running</h2>
+ <p>There's already an embedded instance running on this page, but if you want to
+	run your own instance, check out the <a href='https://github.com/JOBBIN9422/boids.js'>repository</a> and open index.html
+	in your browser.</p>
 
-      <div class='main-content-container'>
-        <div class='page-entry'>
-          <h1>Boids</h1>
-            <canvas id='game-window'></canvas>
-            <div class='game-controls'>
-              <label for='boids-count-slider'>Boids Count</label>
-              <input type='range' min='1' max='50' value='25' step='1' class='slider' name='boids-count-slider' id='boids-count-slider' onchange='changeBoidsAmount(this.value)'/>
-              <label for='boids-count-slider'>Neighborhood Radius</label>
-              <input type='range' min='1' max='100' value='50' step='1' class='slider' name='boids-radius-slider' id='boids-count-slider' onchange='changeBoidsRadius(this.value)'/>
+ <h2>Remarks</h2>
+ <p>I made a basic <em>Boids</em> implementation as a nice way of learning some
+	JavaScript features &amp; functionality (classes, canvas drawing, DOM manipulation)
+	Unfortunately, my code doesn't scale well to large numbers of boids (80 to 100 depending
+	on your hardware/browser). I experimented with drawing to an offscreen canvas,
+	but I couldn't get it to work without a lot of caveats. I also tried splitting each
+	boid update into an asynchronous task via promises, but the overhead was a lot
+	larger than expected.</p>
 
-              <label for='boids-separation-slider'>Separation</label>
-              <input type='range' min='0' max='5' value='1.3' step='0.1' class='slider' name='boids-separation-slider' id='boids-separation-slider' onchange='changeBoidsSeparation(this.value)'/>
-              <label for='boids-alignment-slider'>Alignment</label>
-              <input type='range' min='0' max='5' value='1.1' step='0.1' class='slider' name='boids-alignment-slider' id='boids-alignment-slider' onchange='changeBoidsAlignment(this.value)'/>
-              <label for='boids-cohesion-slider'>Cohesion</label>
-              <input type='range' min='0' max='5' value='1.0' step='0.1' class='slider' name='boids-cohesion-slider' id='boids-cohesion-slider' onchange='changeBoidsCohesion(this.value)'/>
-            </div>
-          
-             <h2>Summary</h2>
-             <p><em>Boids</em> is a flocking algorithm consisting of multiple agents
-                which move according to three basic rules:</p>
-             <ul>
-               <li><strong>Separation: </strong>Steer to avoid getting too close to neighbors.</li>
-               <li><strong>Cohesion: </strong>Steer towards the average position of neighbors.</li>
-               <li><strong>Alignment: </strong>Steer towards the average heading of neighbors.</li>
-             </ul>
+<h2>References</h2>
+<ul>
+	<li><a href='https://www.red3d.com/cwr/boids/'>Craig Reynolds</a></li>
+	<li><a href='https://en.wikipedia.org/wiki/Boids'>Wikipedia</a></li>
+	<li><a href='https://processing.org/examples/flocking.html'>Processing.org</a></li>
+</ul>
 
-             <p>As you can see above, these three simple rules result in pretty convincing flocking
-                behavior when applied to each boid in the simulation. Each boid has its heading
-                and neighborhood radius drawn so you can get a better idea of how flocks form
-                and interact.</p>
-              
-             <h2>Running</h2>
-             <p>There's already an embedded instance running on this page, but if you want to
-                run your own instance, check out the <a href='https://github.com/JOBBIN9422/boids.js'>repository</a> and open index.html
-                in your browser.</p>
-
-             <h2>Remarks</h2>
-             <p>I made a basic <em>Boids</em> implementation as a nice way of learning some
-                JavaScript features &amp; functionality (classes, canvas drawing, DOM manipulation)
-                Unfortunately, my code doesn't scale well to large numbers of boids (80 to 100 depending
-                on your hardware/browser). I experimented with drawing to an offscreen canvas,
-                but I couldn't get it to work without a lot of caveats. I also tried splitting each
-                boid update into an asynchronous task via promises, but the overhead was a lot
-                larger than expected.</p>
-
-            <h2>References</h2>
-                <ul>
-                <li><a href='https://www.red3d.com/cwr/boids/'>Craig Reynolds</a></li>
-                <li><a href='https://en.wikipedia.org/wiki/Boids'>Wikipedia</a></li>
-                <li><a href='https://processing.org/examples/flocking.html'>Processing.org</a></li>
-                </ul>
-        </div>
-
-        <div class='footer'>
-          <hr/>
-          <ul>
-            <li><a href='../index.html'>Home</a></li>
-            <li><a href='mailto:jaubin9422@gmail.com'>Contact Me</a></li>
-          </ul>
-          <img src='../images/vim_created_wq.gif'/>
-        </div>
-      </div>
-
-    </div>
-
-    <script type='text/javascript' src='boids/libraries/math.js'></script>
-    <script type='text/javascript' src='boids/boids.js'></script>
-
-  </body>
-</html>
+<script type='text/javascript' src='boids/libraries/math.js'></script>
+<script type='text/javascript' src='boids/boids.js'></script>

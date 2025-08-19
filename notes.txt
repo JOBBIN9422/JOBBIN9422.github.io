@@ -1,0 +1,4 @@
+RUN JEKYLL: via windows command prompt
+BUILD SITE: bundle install
+SERVE SITE LOCALLY: bundle exec jekyll serve
+CONVERT YOUR EXISTING WEBSITE: https://jekyllrb.com/tutorials/convert-site-to-jekyll/
