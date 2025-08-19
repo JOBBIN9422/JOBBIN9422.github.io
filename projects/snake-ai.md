@@ -73,7 +73,7 @@ The program tracks various statistics about each run in order to allow for easy 
 
 ## Compiling & Running
 If you're using a Linux-based OS, check out the [repository](https://github.com/JOBBIN9422/SnakeAI) and use the included makefile. 
-For Windows, follow [these directions](https://bumpyroadtocode.com/2017/08/05/how-to-install-and-use-fltk-1-3-4-in-visual-studio-2017-complete-guide/') with the source code from the repository.
+For Windows, follow [these directions](https://bumpyroadtocode.com/2017/08/05/how-to-install-and-use-fltk-1-3-4-in-visual-studio-2017-complete-guide/) with the source code from the repository.
 
 <img src='images/options.PNG'/>
 
@@ -90,5 +90,5 @@ A more relevant library such as SDL2 would have been a more reasonable pick. Hin
 
 ## References
 - [Wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm)
-- [Red Blob Games](https://www.redblobgames.com/pathfinding/a-star/introduction.html')
-- [Fast Light Toolkit](https://www.fltk.org/')
+- [Red Blob Games](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
+- [Fast Light Toolkit](https://www.fltk.org/)

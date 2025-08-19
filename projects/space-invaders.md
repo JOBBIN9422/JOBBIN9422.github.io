@@ -9,7 +9,7 @@ layout: default
 For this project, I decided to emulate the classic arcade game, *Space Invaders*. Player 1 controls and all sounds are implemented. Although *Space Invaders* doesn't use all of the Intel 8080 CPU instructions, I decided to implement them for completeness.
 
 ## Compiling & Running
-- Download the source code from the [repository](https://github.com/JOBBIN9422/8080Invaders').
+- Download the source code from the [repository](https://github.com/JOBBIN9422/8080Invaders).
 - Build using the included makefile.
 - Run the executable.
 
@@ -34,6 +34,6 @@ After some tinkering, I came up with the below algorithm which maps each framebu
 <script class='gist' src="https://gist.github.com/JOBBIN9422/5152f6d4608977de08318fc2211ca710.js"></script>
 
 ## References
-- [Computer Archeology](https://computerarcheology.com/Arcade/SpaceInvaders/')
-- [Emulator 101](http://www.emulator101.com/')
-- [8080 Opcodes](http://pastraiser.com/cpu/i8080/i8080_opcodes.html')
+- [Computer Archeology](https://computerarcheology.com/Arcade/SpaceInvaders/)
+- [Emulator 101](http://www.emulator101.com/)
+- [8080 Opcodes](http://pastraiser.com/cpu/i8080/i8080_opcodes.html)
