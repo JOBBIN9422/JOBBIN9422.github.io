@@ -117,6 +117,7 @@ ol {
 }
 
 .header-container {
+	height: 4em;
     color: #fff;
     background-color: #00A39B;
     width: 100%;
@@ -130,6 +131,8 @@ ol {
     display: flex;
     align-items: center;
     justify-content: space-around;
+	margin-top: 0.1%;
+	margin-bottom: 0.1%;
 }
 
 .header a {
@@ -146,7 +149,7 @@ ol {
 }
 .header-title {
     text-align: center;
-    margin: 0px auto;
+    margin: auto;
     font-size: 3em;
 }
 .header-pic {
@@ -154,12 +157,7 @@ ol {
     flex-direction: column;
     align-items: flex-left;
     width: 20%;
-    margin-left: 10px;
-}
-
-.name-display {
-    margin-bottom: 10px;
-    font-size: 1.5em;
+    margin-left: 1%;
 }
 
 .social-links-container {
@@ -169,7 +167,7 @@ ol {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 10px;
+    margin-right: 1%;
 }
 .social-links {
     display: flex;
@@ -178,7 +176,7 @@ ol {
     font-size: 3em;
 }
 .social-links-title {
-    margin-bottom: 0px;
+    margin-bottom: 0%;
 }
 .social-links > a:visited {
     color: #fff;
@@ -188,12 +186,13 @@ ol {
 }
 
 .profile-image {
+	display: flex;
     height: 100%;
+	align-items: center;
 }
 .profile-image > img {
-    margin-top: 5px;
-    width: 70px;
-    height: 70px;
+    width: 3.5em;
+    height: 3.5em;
     max-width: 100%;
     max-height: 100%;
     border-radius: 50%;
@@ -221,22 +220,24 @@ ol {
 }
 
 /* mobile definitions */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1080px) {
+	.header-container {
+		height: 2em;
+	}
     .header-pic {
-        margin-left: 0px;
+        margin-left: 1%;
         width: 15%;
     }
 
     .social-links-container {
         height: 100%;
-        margin-right: 0px;
+        margin-right: 1%;
         width: 35%;
     }
 
     .profile-image > img {
-        margin-top: 5px;
-        width: 30px;
-        height: 30px;
+        width: 1.75em;
+        height: 1.75em;
         max-width: 100%;
         max-height: 100%;
         border-radius: 50%;
@@ -246,13 +247,13 @@ ol {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        font-size: 1em;
+        font-size: 1.75em;
     }
 
     .header-title {
         text-align: center;
-        margin: 0px auto;
-        font-size: 1em;
+        margin: auto;
+        font-size: 1.75em;
     }
 
     .page-entry {
