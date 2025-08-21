@@ -68,7 +68,7 @@ ol {
 }
 .page-entry a:visited {
     text-decoration: none;
-    color: #A30098;
+    /*color: #A30098;*/
 }
 .page-entry a:hover {
     background-color: #DDDDDD;
@@ -104,7 +104,7 @@ ol {
 }
 .footer a:visited {
     text-decoration: none;
-    color: #A30098;
+    /*color: #A30098;*/
 }
 .footer a:hover {
     background-color: #DDDDDD;
