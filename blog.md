@@ -2,4 +2,4 @@
 title: Blog
 layout: blog
 ---
-Blog goes here?
+Random ramblings...
