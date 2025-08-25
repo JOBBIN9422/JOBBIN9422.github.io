@@ -59,6 +59,12 @@ ol {
     margin: 10px 0%;
     max-width: 100%;
 }
+
+.page-entry video {
+    margin: 10px 0%;
+    max-width: 100%;
+}
+
 .page-entry figcaption {
     margin: 0px 0% 30px 0%;
     font-size: 0.75em;
