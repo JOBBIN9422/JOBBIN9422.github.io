@@ -120,7 +120,8 @@ In spite of removing all of the above features, the virtual CPU was still too sl
 One of the more deranged attempts I took at trying to optimize the emulator's performance was pre-sorting the definitions in the hard-coded opcode table from most-called to least-called by the virtual CPU. First, I needed
 to determine the frequency of each instruction call throughout a typical emulator session. I did this by running the [gprof profiler tool](https://blog.mattjustice.com/2020/11/24/gprof-profiler/) on [JCRona's own TamaLib PC port, tamatool](https://github.com/jcrona/tamatool) in an Ubuntu VM
 and converting the output (which lists function calls from most-frequently-called to least-frequently-called) into a more parseable format:
-```
+{% highlight c %}
+{% raw %}
 ﻿	{"PSET #0x%02X            "  , 0xE40, MASK_7B , 0, 0    , 5 , &op_pset_cb}, // PSET
 	{"JP   #0x%02X            "  , 0x000, MASK_4B , 0, 0    , 5 , &op_jp_cb}, // JP
 	{"JP   C #0x%02X          "  , 0x200, MASK_4B , 0, 0    , 5 , &op_jp_c_cb}, // JP_C
@@ -131,7 +132,8 @@ and converting the output (which lists function calls from most-frequently-calle
 	{"CALL #0x%02X            "  , 0x400, MASK_4B , 0, 0    , 7 , &op_call_cb}, // CALL
 	{"CALZ #0x%02X            "  , 0x500, MASK_4B , 0, 0    , 7 , &op_calz_cb}, // CALZ
 	{"RET                   "    , 0xFDF, MASK_12B, 0, 0    , 7 , &op_ret_cb}, // RET
-```
+{% endraw %}
+{% endhighlight %}
 
 Next, I wrote a C# script to parse this input and print out an opcode table in C format with each opcode sorted by call frequency: 
 
