@@ -19,6 +19,7 @@ html, body {
 }
 
 .main-content-container {
+	margin-top: 4em;
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -129,6 +130,7 @@ ol {
 }
 
 .header-container {
+	position: fixed;
 	height: 4em;
     color: #fff;
     background-color: #00A39B;
@@ -272,6 +274,7 @@ ol {
     }
 
 	.main-content-container {
+		margin-top: 2em;
 		width: 85%;
 	}
 	
@@ -285,7 +288,7 @@ ol {
 
     .footer li {
         margin: 0px 10px;
-        font-size: 0.75em;
+        /* font-size: 0.75em; */
     }
 
     #game-window {
