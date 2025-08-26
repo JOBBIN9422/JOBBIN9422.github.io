@@ -2,15 +2,16 @@
 title: Snake AI
 layout: default
 ---
+
+## Background
+Back when I wrote this project, I was taking my Introduction to AI class in college. We learned about the main pathfinding algorithms (BFS, DFS, etc.) and I wanted to code something to enhance my understanding of them.
+I had written *Snake* in C++ recently, so I decided to automate it with a pathfinding AI. 
+
 <figure>
   <img src='images/greedy.gif'/>
   <figcaption>Greedy BFS finding a path from the snake's head to the food each time it eats.</figcaption>
 </figure>
 
-## Background
-Back when I wrote this project, I was taking my Introduction to AI class in college. We covered a lot of pathfinding algorithms (BFS, DFS, etc.) and I wanted to code something to enhance my understanding of them.
-I had written *Snake* in C++ recently, so I decided to automate it with a pathfinding AI. 
-		 
 ## Summary
 The game plays itself using one of several shortest-path algorithms. The following algorithms are included:
 - A-Star

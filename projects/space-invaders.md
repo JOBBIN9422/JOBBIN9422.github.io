@@ -19,18 +19,21 @@ and all sound comes from custom analog circuitry (RLC circuits). Those features 
 ## Summary
 ![Space Invaders Emulator Demo]({% link /projects/images/invaders.gif %})
 
+### The Emulator
 I wrote the emulator in C++ using SDL2 for rendering, audio, and reading player input. Player 1 controls and all sounds are implemented. Although *Space Invaders* doesn't use all of the Intel 8080 CPU instructions, I decided to implement them for completeness.
 
-## Compiling & Running
-- Download the source code from the [repository](https://github.com/JOBBIN9422/8080Invaders).
-- Build using the included makefile.
-- Run the executable.
-
-## Controls
+#### Controls
 - **Shift:** insert coin
 - **Enter:** P1 start
 - **Left/Right arrow keys**: P1 move left/right
 - **Spacebar:** P1 fire
+
+#### Compiling & Running
+- Download the source code from the [repository](https://github.com/JOBBIN9422/8080Invaders).
+- Build using the included makefile.
+- Run the executable.
+
+
 
 ## Remarks
 
