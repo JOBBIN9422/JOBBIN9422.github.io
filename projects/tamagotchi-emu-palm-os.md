@@ -31,7 +31,7 @@ I set up the IIIx with its original cradle and a serial-to-USB adapter, and to m
 the cradle to flash the latest iteration of Palm OS for the IIIx and it proved to be a pretty good distraction-free journaling device/organizer. 
 
 <figure>
-  <video muted autoplay controls>
+  <video muted controls>
     <source src="videos/palm-flashing.mp4" type="video/mp4">
   </video> 
   <figcaption>Flashing the Palm IIIx with the latest Palm OS using the original cradle under Windows 11!</figcaption>
