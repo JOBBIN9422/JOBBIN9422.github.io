@@ -90,7 +90,7 @@ it in Java.
     <video muted controls>
     <source src="videos/java-raycaster.mp4" type="video/mp4">
   </video> 
-  <figcaption>a pseudo-3D camera. I didn't use this technique (oops).</figcaption>
+  <figcaption>The end-result of attempt #2. I added a gradient to the floor & ceiling colors to add an illusion of depth, and now there are entities populating the test map.</figcaption>
 </figure>
 
 ## References
