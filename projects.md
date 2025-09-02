@@ -3,7 +3,6 @@ title: Programming Projects
 layout: default
 ---
 
-## Projects
 These are the personal projects that I'm working on or have worked on previously. If you're interested, check out my [GitHub](https://github.com/JOBBIN9422).
 - [Tamagotchi Emulator Palm OS Port]({% link projects/tamagotchi-emu-palm-os.md %})
 - [YSFlight Community Edition](https://github.com/YSCEDC/YSCE)

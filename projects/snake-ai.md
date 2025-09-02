@@ -79,8 +79,8 @@ The program tracks various statistics about each run in order to allow for easy 
 </figure>
 
 ## Compiling & Running
-If you're using a Linux-based OS, check out the [repository](https://github.com/JOBBIN9422/SnakeAI) and use the included makefile. 
-For Windows, follow [these directions](https://bumpyroadtocode.com/2017/08/05/how-to-install-and-use-fltk-1-3-4-in-visual-studio-2017-complete-guide/) with the source code from the repository.
+First, clone the [repository](https://github.com/JOBBIN9422/SnakeAI. If you're using a Linux-based OS, use the included makefile to build the application. 
+If you use Windows, follow [these directions](https://bumpyroadtocode.com/2017/08/05/how-to-install-and-use-fltk-1-3-4-in-visual-studio-2017-complete-guide/) instead.
 
 <img src='images/options.PNG'/>
 

@@ -332,6 +332,12 @@ Credit where credit is due, the [CloudPilot emulator](https://cloudpilot-emu.git
 
 Wow, that was a lot of words. I think it goes without saying, but I learned a lot throughout this project and found it really fulfilling. If you made it this far, I'd like to say thanks for taking the time to read all of this!
 
+### Compiling and Running
+- Find and install CodeWarrior IDE (I don't remember where I found my installer).
+- Checkout the code from the [repository](https://github.com/JOBBIN9422/TamagotchiPalmOS).
+- Import the project and build it in a debug or release configuration.
+- Find the resulting `.pdb` file in your build folder. Install this on a Palm device (a physical Palm or an emulator).
+
 ### Credits & References
 
 - [TamaLib by JCRona](https://github.com/jcrona/tamalib)

@@ -72,6 +72,7 @@ The raycasting engine does the following on each game tick to draw the scene:
 The above algorithm loops over every vertical column in the display window and each loop pass will draw a column of wall texture to the screen (scaled by distance to the player). This will construct a perspective-correct pseudo-3D scene with texture-mapped walls!
 
 ### Compiling & Running
+- Clone the code from the [repository](https://github.com/JOBBIN9422/raycaster).
 - Install libraries:
   - [SDL2](https://www.libsdl.org/download-2.0.php)
   - [SDL2_image](https://www.libsdl.org/projects/SDL_image/)
