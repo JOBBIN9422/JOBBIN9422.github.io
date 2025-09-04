@@ -29,6 +29,33 @@ html, body {
     border-radius: 0px 0px 10px 10px;
 }
 
+.showcase-container {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.showcase-container h1, 
+.showcase-container h2, 
+.showcase-container p {
+	text-align: center;
+	margin: 5px 0% !important;
+}
+
+.showcase-container img {
+	height: 300px;
+	border-radius: 10px;
+	margin: 10px 10px !important; 
+}
+
+.showcase-container hr {
+    width: 100%;
+    margin: 10px auto;
+	color: #c2c2c2;
+	border-style: solid;
+}
+
 .page-entry {
     width: 70%;
     margin: 10px 0;
@@ -40,8 +67,8 @@ html, body {
 }
 
 .page-entry h1,
-h2 {
-    margin: 20px 0%;
+.page-entry h2 {
+    margin: 10px 0%;
 }
 .page-entry h3 {
     margin: 20px 0% 10px 0%;
@@ -50,7 +77,7 @@ h2 {
     margin: 10px 0%;
 }
 .page-entry > ul,
-ol {
+.page-entry > ol {
     margin: 10px 0%;
 }
 .page-entry li {
@@ -106,6 +133,8 @@ ol {
 .footer hr {
     width: 100%;
     margin: 10px auto;
+    color: #c2c2c2;
+	border-style: solid;
 }
 .footer ul {
     margin: 0px auto 10px auto;
