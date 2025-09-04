@@ -46,7 +46,6 @@ html, body {
 .showcase-container img {
 	height: 300px;
 	border-radius: 10px;
-	margin: 10px 10px !important; 
 }
 
 .showcase-container hr {
